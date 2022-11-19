@@ -1,0 +1,15 @@
+/home/hagay/Development/csharp/tic-tac-toe/bin/Debug/net6.0/tic-tac-toe
+/home/hagay/Development/csharp/tic-tac-toe/bin/Debug/net6.0/tic-tac-toe.deps.json
+/home/hagay/Development/csharp/tic-tac-toe/bin/Debug/net6.0/tic-tac-toe.runtimeconfig.json
+/home/hagay/Development/csharp/tic-tac-toe/bin/Debug/net6.0/tic-tac-toe.dll
+/home/hagay/Development/csharp/tic-tac-toe/bin/Debug/net6.0/tic-tac-toe.pdb
+/home/hagay/Development/csharp/tic-tac-toe/obj/Debug/net6.0/tic-tac-toe.csproj.AssemblyReference.cache
+/home/hagay/Development/csharp/tic-tac-toe/obj/Debug/net6.0/tic-tac-toe.GeneratedMSBuildEditorConfig.editorconfig
+/home/hagay/Development/csharp/tic-tac-toe/obj/Debug/net6.0/tic-tac-toe.AssemblyInfoInputs.cache
+/home/hagay/Development/csharp/tic-tac-toe/obj/Debug/net6.0/tic-tac-toe.AssemblyInfo.cs
+/home/hagay/Development/csharp/tic-tac-toe/obj/Debug/net6.0/tic-tac-toe.csproj.CoreCompileInputs.cache
+/home/hagay/Development/csharp/tic-tac-toe/obj/Debug/net6.0/tic-tac-toe.dll
+/home/hagay/Development/csharp/tic-tac-toe/obj/Debug/net6.0/refint/tic-tac-toe.dll
+/home/hagay/Development/csharp/tic-tac-toe/obj/Debug/net6.0/tic-tac-toe.pdb
+/home/hagay/Development/csharp/tic-tac-toe/obj/Debug/net6.0/tic-tac-toe.genruntimeconfig.cache
+/home/hagay/Development/csharp/tic-tac-toe/obj/Debug/net6.0/ref/tic-tac-toe.dll
