@@ -52,7 +52,7 @@ namespace TicTacToeGame
 
         private bool isValidMove(int index)
         {
-            return !positionTaken(index) && index >= 0 && index < 9;
+            return index >= 0 && index < 9 && !positionTaken(index);
         }
 
         private char currentPlayer()
@@ -69,12 +69,12 @@ namespace TicTacToeGame
             if (isValidMove(index))
             {
                 move(index, currentPlayer());
+                displayBoard();
             }
             else
             {
                 turn();
             }
-            displayBoard();
         }
 
         // int.MaxValue in first position means isWon is false
