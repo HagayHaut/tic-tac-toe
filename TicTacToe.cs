@@ -79,7 +79,7 @@ namespace TicTacToeGame
 
         // int.MaxValue in first position means isWon is false
         // else returns winning combo
-        private (int, int, int) isWon()
+        private (int, int, int) IsWon()
         {
             foreach (var (a, b, c) in winCombos)
             {
@@ -104,19 +104,19 @@ namespace TicTacToeGame
 
         private bool IsDraw()
         {
-            var (a, b, c) = isWon();
+            var (a, b, c) = IsWon();
             return IsFull() && a == int.MaxValue;
         }
 
         private bool IsOver()
         {
-            var (a, b, c) = isWon();
+            var (a, b, c) = IsWon();
             return a != int.MaxValue || IsDraw();
         }
 
-        private char winner()
+        private char Winner()
         {
-            var (a, b, c) = isWon();
+            var (a, b, c) = IsWon();
             return a == int.MaxValue ? ' ' : board[a];
         }
 
@@ -127,7 +127,7 @@ namespace TicTacToeGame
                 Turn();
             }
 
-            Console.WriteLine(winner() == ' ' ? "DRAW! Thanks for playing!" : $"{winner()} WINS! Thanks for playing!");
+            Console.WriteLine(Winner() == ' ' ? "DRAW! Thanks for playing!" : $"{Winner()} WINS! Thanks for playing!");
         }
     }
 }
