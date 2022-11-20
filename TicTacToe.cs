@@ -26,12 +26,11 @@ namespace TicTacToeGame
 
         private void DisplayBoard()
         {
-            Console.WriteLine($" {@board[0]} | {@board[1]} | {@board[2]} ");
+            Console.WriteLine($"\n {@board[0]} | {@board[1]} | {@board[2]} ");
             Console.WriteLine("-----------");
             Console.WriteLine($" {@board[3]} | {@board[4]} | {@board[5]} ");
             Console.WriteLine("-----------");
-            Console.WriteLine($" {@board[6]} | {@board[7]} | {@board[8]} ");
-            Console.WriteLine("-----------");
+            Console.WriteLine($" {@board[6]} | {@board[7]} | {@board[8]} \n");
         }
 
         private int InputToIndex(string input)
@@ -62,7 +61,7 @@ namespace TicTacToeGame
 
         private void Turn()
         {
-            Console.Write("Please enter a position (1-9): ");
+            Console.Write($"~ Turn {CurrentPlayer()} ~ Please enter a position (1-9): ");
             string userInput = Console.ReadLine();
             int index = InputToIndex(userInput);
 
@@ -128,6 +127,7 @@ namespace TicTacToeGame
             }
 
             Console.WriteLine(Winner() == ' ' ? "DRAW! Thanks for playing!" : $"{Winner()} WINS! Thanks for playing!");
+            Console.WriteLine("**************************************************");
         }
     }
 }
