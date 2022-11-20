@@ -19,11 +19,11 @@ namespace TicTacToeGame
             Console.WriteLine("  )(   _)(_( (__     )(  /(__)\\( (__     )(   )(_)(  )__) ");
             Console.WriteLine(" (__) (____)\\___)   (__)(__)(__)\\___)   (__) (_____)(____)\n");
             Console.WriteLine("\nGrid Positions:");
-            Console.WriteLine("\n 1 | 2 | 3 ");
-            Console.WriteLine("-----------");
-            Console.WriteLine(" 4 | 5 | 6 ");
-            Console.WriteLine("-----------");
-            Console.WriteLine(" 7 | 8 | 9 \n");
+            Console.WriteLine("\n    1 | 2 | 3 ");
+            Console.WriteLine("   -----------");
+            Console.WriteLine("    4 | 5 | 6 ");
+            Console.WriteLine("   -----------");
+            Console.WriteLine("    7 | 8 | 9 \n");
         }
     }
 }
