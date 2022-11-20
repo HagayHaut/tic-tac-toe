@@ -1,5 +1,7 @@
 # Tic Tac Toe for the Console
 
+![ascii title](./assets/tictactoetitle.PNG)
+
 ## To Play
 
 **Note:** You must .NET 6.0 installed to run this application.
