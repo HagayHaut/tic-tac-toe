@@ -24,7 +24,7 @@ namespace TicTacToeGame
             moveCount = 0;
         }
 
-        private void displayBoard()
+        private void DisplayBoard()
         {
             Console.WriteLine($" {@board[0]} | {@board[1]} | {@board[2]} ");
             Console.WriteLine("-----------");
@@ -34,46 +34,46 @@ namespace TicTacToeGame
             Console.WriteLine("-----------");
         }
 
-        private int inputToIndex(string input)
+        private int InputToIndex(string input)
         {
             return Int32.Parse(input) - 1;
         }
 
-        private void move(int index, char token)
+        private void Move(int index, char token)
         {
             board[index] = token;
             moveCount++;
         }
 
-        private bool positionTaken(int index)
+        private bool PositionTaken(int index)
         {
             return board[index] != ' ';
         }
 
-        private bool isValidMove(int index)
+        private bool IsValidMove(int index)
         {
-            return index >= 0 && index < 9 && !positionTaken(index);
+            return index >= 0 && index < 9 && !PositionTaken(index);
         }
 
-        private char currentPlayer()
+        private char CurrentPlayer()
         {
             return moveCount % 2 == 0 ? 'X' : 'O';
         }
 
-        private void turn()
+        private void Turn()
         {
             Console.Write("Please enter a position (1-9): ");
             string userInput = Console.ReadLine();
-            int index = inputToIndex(userInput);
+            int index = InputToIndex(userInput);
 
-            if (isValidMove(index))
+            if (IsValidMove(index))
             {
-                move(index, currentPlayer());
-                displayBoard();
+                Move(index, CurrentPlayer());
+                DisplayBoard();
             }
             else
             {
-                turn();
+                Turn();
             }
         }
 
@@ -83,7 +83,7 @@ namespace TicTacToeGame
         {
             foreach (var (a, b, c) in winCombos)
             {
-                if (positionTaken(a) && board[a] == board[b] && board[b] == board[c])
+                if (PositionTaken(a) && board[a] == board[b] && board[b] == board[c])
                 {
                     return (a, b, c);
                 }
@@ -92,7 +92,7 @@ namespace TicTacToeGame
             return (int.MaxValue, 0, 0);
         }
 
-        private bool isFull()
+        private bool IsFull()
         {
             foreach (char c in board)
             {
@@ -102,16 +102,16 @@ namespace TicTacToeGame
             return true;
         }
 
-        private bool isDraw()
+        private bool IsDraw()
         {
             var (a, b, c) = isWon();
-            return isFull() && a == int.MaxValue;
+            return IsFull() && a == int.MaxValue;
         }
 
-        private bool isOver()
+        private bool IsOver()
         {
             var (a, b, c) = isWon();
-            return a != int.MaxValue || isDraw();
+            return a != int.MaxValue || IsDraw();
         }
 
         private char winner()
@@ -120,11 +120,11 @@ namespace TicTacToeGame
             return a == int.MaxValue ? ' ' : board[a];
         }
 
-        public void play()
+        public void Play()
         {
-            while (!isOver())
+            while (!IsOver())
             {
-                turn();
+                Turn();
             }
 
             Console.WriteLine(winner() == ' ' ? "DRAW! Thanks for playing!" : $"{winner()} WINS! Thanks for playing!");
