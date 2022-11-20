@@ -61,7 +61,7 @@ namespace TicTacToeGame
 
         private void Turn()
         {
-            Console.Write($"~ Turn {CurrentPlayer()} ~ Please enter a position (1-9): ");
+            Console.Write($"~ Turn {CurrentPlayer()} ~: ");
             string userInput = Console.ReadLine();
             int index = InputToIndex(userInput);
 
@@ -72,6 +72,7 @@ namespace TicTacToeGame
             }
             else
             {
+                Console.WriteLine("\nPlease enter a position between 1 and 9 that has not been taken\n");
                 Turn();
             }
         }
