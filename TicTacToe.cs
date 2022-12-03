@@ -59,10 +59,24 @@ namespace TicTacToeGame
             return moveCount % 2 == 0 ? 'X' : 'O';
         }
 
+        private void PrintError()
+        {
+            Console.WriteLine("\nPlease enter a position between 1 and 9 that has not been taken\n");
+        }
+
         private void Turn()
         {
-            Console.Write($"~ Turn {CurrentPlayer()} ~: ");
-            string userInput = Console.ReadLine();
+            Console.Write($"~ Turn {CurrentPlayer()} ~ -> ");
+            var input = Console.ReadLine();
+
+            string userInput = input == null ? "" : input;
+
+            if (userInput == "")
+            {
+                PrintError();
+                Turn();
+            }
+
             int index = InputToIndex(userInput);
 
             if (IsValidMove(index))
@@ -72,7 +86,7 @@ namespace TicTacToeGame
             }
             else
             {
-                Console.WriteLine("\nPlease enter a position between 1 and 9 that has not been taken\n");
+                PrintError();
                 Turn();
             }
         }
