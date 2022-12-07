@@ -157,7 +157,7 @@ namespace TicTacToeGame
             }
 
             Console.WriteLine(Winner() == ' ' ? "DRAW! Thanks for playing!" : $"{Winner()} WINS! Thanks for playing!");
-            Console.WriteLine("**************************************************");
+            Console.WriteLine("\n\n**************************************************\n");
         }
     }
 }
